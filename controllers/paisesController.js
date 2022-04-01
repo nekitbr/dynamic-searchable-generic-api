@@ -4,7 +4,7 @@ exports.get = (req, res) => {
     const response = Query.GETgeneric('Pais', req)
     if(typeof response === 'object'){
 
-        res.status(Object.keys(response) > 0 ? 200 : 404).json(
+        res.status(Object.keys(response).length > 0 ? 200 : 404).json(
             {
                 data: response
             }
