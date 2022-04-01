@@ -1,0 +1,13 @@
+<script>
+  setInterval(showTime, 1000)
+  function showTime() {
+    let options = { timeZone: 'Europe/London', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }
+    let formatter = new Intl.DateTimeFormat([], options)
+    let time = formatter.format(new Date())
+    document.getElementById('time').innerText = time
+  }
+</script>
+
+<span id="time">
+  <%# clock goes here %>
+</span>

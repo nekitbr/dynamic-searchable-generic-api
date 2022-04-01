@@ -1,0 +1,81 @@
+<%- include('head', { title: anime.data.titles.en ?? anime.data.titles[Object.keys(anime.data.titles)[0]] } ) %> 
+
+<body class="bg-gray-600 text-white">
+  <div>
+    <%- include ('header') %>
+  </div>
+
+  <div id="page-info" anime-id="<%= anime.data.id %>" 
+    episodes-locale="<%= episodes?.data.documents[0].locale ? episodes.data.documents[0].locale : '' %>"
+     episodes-source="<%= episodes?.data.documents[0].source ? episodes.data.documents[0].source : ''%>">
+    <img id="anime-banner-image" class="hidden sm:flex mx-auto" src="<%= anime.data.banner_image || anime.data.cover_image %>" alt="anime banner image"/>
+    <img id="anime-cover-image" class="flex sm:hidden mx-auto mt-0.5" src="<%= anime.data.cover_image || anime.data.banner_image %>" alt="anime cover image"/>
+    <h1 id="anime-title" class="font-bold text-lg sm:text-5xl text-center border-b mb-4"
+      ><%= anime.data.titles.en ?? anime.data.titles[Object.keys(anime.data.titles)[0]] %>
+    </h1 class="font-bold text-center">
+  </div>
+
+  <div class="ml-2">
+    <div class="border-b">
+      <h1 class="font-bold text-xl">Synopsis</h1>
+      <p class="ml-2">
+        <%- anime.data.descriptions.en ?? anime.data.descriptions[Object.keys(anime.data.descriptions)[0]] ?? 'No description for this anime given :( , sorry!' %>
+      </p>
+    </div>
+    <div>
+      <% if (episodes) { %> 
+        <table id="episodes-container" class="mx-auto">
+          <tr>
+            <td class="font-bold uppercase grid">
+              <h1 class="mx-auto">ALL EPISODES:</h1>
+            </td>
+          </tr>
+          <% for( let i=0; i < episodes.data.documents.length; i++ ) { %>
+            <tr id="episode-tr">
+              <td class="grid">
+                <label class="font-semibold uppercase text-sm cursor-pointer mx-auto" episode-options-menu="<%= episodes.data.documents[i].id %>" onclick="showOptions()">
+                  <%= anime.data.titles.en ?? anime.data.titles[Object.keys(anime.data.titles)[0]] %> - <%= episodes.data.documents[i].number %>
+                </label>
+                <div menu-container id="episode-<%= episodes.data.documents[i].id %>" class="grid mx-auto transition-all hidden">
+                  <a onclick="showOptions()">
+                    <button episode-stream-button="<%= episodes.data.documents[i].id %>" class="text-white background-transparent uppercase mx-4 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+                      <i class="text-purple-500 fas fa-satellite-dish"></i> Stream
+                    </button>
+                  </a>
+                  <a episode-download-link id="episode-download-link-<%= episodes.data.documents[i].id %>" href="<%= episodes.data.documents[i].video %>">
+                    <button class="text-white background-transparent uppercase mx-4 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">
+                      <i class="text-purple-500 fas fa-download"></i> Download
+                    </button>
+                  </a>
+                </div>
+                <div video-container id="video-container-<%= episodes.data.documents[i].id %>" class="hidden">
+                  <video id="video-element-<%= episodes.data.documents[i].id %>" width="400" controls>
+                    <!-- src is applied with jquery at scripts -->
+                    <source src="" id="video-source-<%= episodes.data.documents[i].id %>" type="video/mp4">
+                    Your browser does not support this video.
+                  </video>
+                </div>
+              </td>
+            </tr>
+          <% } %>
+        </table>
+        <% if (episodes?.data.current_page != episodes?.data.last_page) {%> 
+          <div class="mt-4 flex">
+            <button id="dynamic-load-button" type="submit" class="mx-auto mb-4 p-2 bg-white text-black rounded-lg" onclick="dynamicLoad()">
+              Load more
+            </button>
+          </div>
+        <% } %> 
+      <% } else { %>
+        <p class="text-center text-lg bg-gray-700 rounded border p-2 m-2">
+          <%= 'There aren\'t any episodes on AniAPI for now, '
+            + (anime.data.episodes_count < 1 ? ('sorry!')
+              : ('but we can say for sure that this '
+                + ['TV Show', 'Short TV Show', 'Movie', 'Special Episode', 'OVA', 'ONA', 'Song'][anime.data.format]
+                + ' has '
+                + (anime.data.episodes_count > 1 ? (anime.data.episodes_count + ' episodes!') : (anime.data.episodes_count + ' episode/track!')))) %>
+        </p>
+      <% } %> 
+    </div>
+  </div>
+</body>

@@ -1,0 +1,48 @@
+[![netwire-tech](https://d1jwyn4q8j7i2v.cloudfront.net/img/logo-netwire-colorido-tech.webp "netwire-tech")](https://d1jwyn4q8j7i2v.cloudfront.net/img/logo-netwire-colorido-tech.webp "netwire-tech")
+
+    console.log("Hello Dev! 👋")
+
+Welcome to our technical development test. 
+
+👨‍💻 We expect from you your creativity and innovation, so do not be ashamed to "code express yourself". 👩‍💻
+
+If you can, we will love to see some front-end code (UI), but this is not our priority to evaluate you on that. ✌️
+
+------------
+
+### 🤩 Are you an anime lover? 
+
+[![cool](https://c.tenor.com/yFrF3v5Uui8AAAAM/deal-with-it-sunglasses.gif)](https://c.tenor.com/yFrF3v5Uui8AAAAM/deal-with-it-sunglasses.gif)
+
+If your answer was a huge **YES** or not, we promise you will like to do this tech test.
+
+We will use the [ANIAPI](https://aniapi.com/ "ANIAPI") 
+> an open-source REST API for anime streaming lovers. (official website api description)
+
+------------
+
+### What you need to do?
+
+Consume the anime ANIAPI and develop your own NodeJs REST API with express.
+
+Easy, right?
+
+[![easy](https://i.imgur.com/2A9e807.gif)](https://i.imgur.com/2A9e807.gif)
+
+
+
+#### Here are some ideas you can develop
+1. Provide an anime list;
+2. Show individual complete and short anime info;
+3. Use anime images;
+4. Reproduce episodes;
+5. Use audio previews;
+6. Search for a specific anime and store the search history for a future use;
+
+
+and so forth...
+
+[![goodluck](https://c.tenor.com/_oB4O-5QaRUAAAAC/goodnight.gif)](https://c.tenor.com/_oB4O-5QaRUAAAAC/goodnight.gif)
+
+
+

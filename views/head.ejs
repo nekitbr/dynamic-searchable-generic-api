@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/public/main.css">
+  <script src="https://kit.fontawesome.com/92217e0ed9.js" crossorigin="anonymous"></script>
+  <title><%= title %></title>
+
+  <!-- ajax && jquery, newer versions dont work with MS Edge, for some reason -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js" ></script>
+
+  <!-- Flowbite header -->
+  <script src="/node/flowbite.bundle.js"></script>
+
+  <!-- functionalities script -->
+  <script src="/public/scripts.js"></script>
+  
+  <!-- for anime cover preview, works with cover preview script at scripts -->
+  <p id="preview-image-overlay" class="hidden absolute rounded-lg bg-white p-2" style="border: 1px solid gray">
+    <img id="preview-image" src="">
+  </p>
+</head>

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "brazil",
+        "description": "brazil description",
+        "population": 212559417,
+        "gdp": 1444733260000
+    },
+    {
+        "id": 2,
+        "name": "united states",
+        "description": "united states description",
+        "population": 334403317,
+        "gdp": 20953030000000
+    },
+    {
+        "id": 3,
+        "name": "canada",
+        "description": "canada country description",
+        "population": 37742154,
+        "gdp": 1645423410000
+    },
+    {
+        "id": 4,
+        "name": "argentina",
+        "description": "argentina country description",
+        "population": 45195774,
+        "gdp": 389288056270
+    },
+    {
+        "id": 5,
+        "name": "nigeria",
+        "description": "nigeria country description",
+        "population": 206139589,
+        "gdp": 432293776260
+    }
+]

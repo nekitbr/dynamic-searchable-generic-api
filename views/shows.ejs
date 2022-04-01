@@ -1,0 +1,39 @@
+<%- include('head', {title: 'Shows'}) %> 
+
+<body class="bg-gray-600 text-white">
+  <div>
+    <%- include('header') %>
+  </div>
+
+  <div class="my-4 mx-2 sm:mx-auto sm:w-3/4 rounded-lg px-2 py-2 bg-gray-500 flex flex-col flex flex-col">
+    <% if (anime.status_code === 200) { %> 
+      <% if (anime.data.last_page > 1) { %>
+        <h2 id="pagination-message" class="mx-2 text-center">Found a total of <%= anime.data.count %> results!</h2>
+      <% } %>
+
+      <h1 class="mx-auto">All shows:</h1>
+      <div id="anime-container">
+        <% for( let i=0; i < anime.data.documents.length; i++ ) { %>
+          <div id="anime-div" class="mx-2 text-center">
+            <%# if there's not a title for EN locale then it will get the first one avaiable %>
+            <a href="<%= 'shows/'+ anime.data.documents[i].id %>" data-preview-image="<%= anime.data.documents[i].cover_image %>"
+                class="text-center text-slate-300 hover:text-purple-400 border-b">
+              <%= anime.data.documents[i].titles.en ?? anime.data.documents[i].titles[Object.keys(anime.data.documents[i].titles)[0]] %>
+            </a>
+          </div>
+        <% } %>
+      </div>
+      <% if (anime?.data.current_page != anime?.data.last_page) { %>
+        <div class="mt-4 flex">
+          <button id="dynamic-load-button" type="submit" class="mx-auto p-2 bg-white text-black rounded-lg" onclick="dynamicLoad()">
+            Load more
+          </button>
+        </div>
+      <% } %> 
+      <% } else { %>
+        <div>
+          <h1>No anime found with the search terms!</h1>
+        </div>
+      <% } %>
+  </div>
+</body>
