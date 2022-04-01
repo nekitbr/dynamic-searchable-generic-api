@@ -4,7 +4,6 @@ exports.get = (req, res) => {
     const existingKeys = Object.keys(Cidade[0])
     const queryKeys = Object.keys(req.query)
     const queryValues = Object.values(req.query)
-    console.log(queryKeys, queryValues)
     const notSupportedKeys = []
 
     if(queryKeys.length > existingKeys.length){
@@ -33,12 +32,12 @@ exports.get = (req, res) => {
 
 
     if(!id && queryKeys.length < 1){
-        res.send(Cidade)
+        res.json(Cidade)
         return
     }
 
     if(id && queryKeys.length < 1){
-        res.send(Cidade[id-1])
+        res.json(Cidade[id-1])
         return
     }
 
@@ -57,5 +56,5 @@ exports.get = (req, res) => {
             response.push(cidade)
     }
 
-    res.send(response)
+    res.json(response)
 }

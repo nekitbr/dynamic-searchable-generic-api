@@ -2,126 +2,176 @@
     {
         "id": 1,
         "name": "Random state name 1",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 1
     },
     {
         "id": 2,
         "name": "Random state name 2",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 1
     },
     {
         "id": 3,
         "name": "Random state name 3",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 1
     },
     {
         "id": 4,
         "name": "Random state name 4",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 1
     },
     {
         "id": 5,
         "name": "Random state name 5",
-        "paisId": 2
+        "currency": "BRL",
+        "minimumWage": "1500",
+        "paisId": 1
     },
     {
         "id": 6,
         "name": "Random state name 6",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 2
     },
     {
         "id": 7,
         "name": "Random state name 7",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 2
     },
     {
         "id": 8,
         "name": "Random state name 8",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 2
     },
     {
         "id": 9,
         "name": "Random state name 9",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 2
     },
     {
         "id": 10,
         "name": "Random state name 10",
-        "paisId": 3
+        "currency": "BRL",
+        "minimumWage": "1500",
+        "paisId": 2
     },
     {
         "id": 11,
         "name": "Random state name 11",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 3
     },
     {
         "id": 12,
         "name": "Random state name 12",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 3
     },
     {
         "id": 13,
         "name": "Random state name 13",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 3
     },
     {
         "id": 14,
         "name": "Random state name 14",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 3
     },
     {
         "id": 15,
         "name": "Random state name 15",
-        "paisId": 4
+        "currency": "BRL",
+        "minimumWage": "1500",
+        "paisId": 3
     },
     {
         "id": 16,
         "name": "Random state name 16",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 4
     },
     {
         "id": 17,
         "name": "Random state name 17",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 4
     },
     {
         "id": 18,
         "name": "Random state name 18",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 4
     },
     {
         "id": 19,
         "name": "Random state name 19",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 4
     },
     {
         "id": 20,
         "name": "Random state name 20",
-        "paisId": 5
+        "currency": "BRL",
+        "minimumWage": "1500",
+        "paisId": 4
     },
     {
         "id": 21,
         "name": "Random state name 21",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 5
     },
     {
         "id": 22,
         "name": "Random state name 22",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 5
     },
     {
         "id": 23,
         "name": "Random state name 23",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 5
     },
     {
         "id": 24,
         "name": "Random state name 24",
+        "currency": "BRL",
+        "minimumWage": "1500",
         "paisId": 5
     },
     {
         "id": 25,
         "name": "Random state name 25",
-        "paisId": 1
+        "currency": "BRL",
+        "minimumWage": "1500",
+        "paisId": 5
     }
 ]
